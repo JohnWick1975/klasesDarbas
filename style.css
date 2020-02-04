@@ -1,0 +1,32 @@
+*{
+    box-sizing: border-box;
+}
+
+
+body {
+    display: flex;
+    justify-content: center;
+}
+
+
+section {
+    /*display: flex;*/
+    /*justify-content: center;*/
+    width: 1080px;
+    padding-top: 5%;
+    margin: -8px;
+    border: 1px solid red;
+}
+
+.imageContainer {
+    text-align: center;
+    display: inline-block;
+    margin-right: 8px;
+    width: 348px;
+    border: 1px solid blue;
+}
+
+img {
+    object-fit: cover;
+    width: 100%;
+}
