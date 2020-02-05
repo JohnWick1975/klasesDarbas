@@ -1,12 +1,12 @@
 <?php
 
-$a = array(10, 20, 30, 1, 1, 50, 0, 0, 'jonas', 'petras');
+$a = array(10, 20, 30, 50, 60, 70, 80);
+$count = count($a);
+$b = [];
+for ($x = 0; $x <= $count; $x +=2){
+    $b[] = $a[$x];
+}
 
-foreach ($a as $array) {
-    if (is_int($array)) {
-        $array *= 10;
-        print $array . '<br>';
-    } else {
-        print $array . '<br>';
-    }
+foreach ($b as $array){
+    print $array . '<br>';
 }
