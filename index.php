@@ -79,7 +79,7 @@
 			</form>
 		</div>
 		<div class="container">
-			<table class="w-100 text-center">
+			<table class="w-100 text-center bg-light">
 				<?php
 				foreach (array_keys($usersData[0]) as $userInfo):?>
 				<th class='w-25 p-3 border border-dark'><?php print $userInfo?></th>
@@ -97,7 +97,7 @@
 						<td class='w-25 p-3 border border-dark'>" . $value['name'] . "</td>
 						<td class='w-25 p-3 border border-dark'>" . $value['age'] . "</td>
 						<td class='w-25 p-3 border border-dark'>" . $value['address'] . "</td>
-						<td class='w-25 p-3 border border-dark'>" . $value['url'] . "</td>
+						<td class='w-25 p-3 border border-dark'><img src=" . $value['url'] . "></td>
 					</tr>					
 					";
                 }

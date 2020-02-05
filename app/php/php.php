@@ -242,27 +242,27 @@ $usersData = [
         'name' => 'tomas',
         'age' => 24,
         'address' => 'Kauno g. 3',
-        'url' => 'www...'
+        'url' => 'https://data.nhacpro.net/data/avatar/bafb00cce1c83ac483e88870718c6fb1.jpg'
     ],
 
     [
         'name' => 'jonas',
-        'age' => 24,
+        'age' => 30,
         'address' => 'Kauno g. 3',
-        'url' => 'www...'
+        'url' => 'https://movieplayer.net-cdn.it/t/images/2013/09/30/jackman-286989_jpg_750x400_crop_q85.jpg'
     ],
 
     [
         'name' => 'vilius',
-        'age' => 24,
+        'age' => 27,
         'address' => 'Kauno g. 3',
-        'url' => 'www...'
+        'url' => 'https://movieplayer.net-cdn.it/t/images/2013/08/19/bradley-283025_jpg_750x400_crop_q85.jpg'
     ],
     [
         'name' => 'donatas',
-        'age' => 24,
+        'age' => 35,
         'address' => 'Kauno g. 3',
-        'url' => 'www...'
+        'url' => 'https://pbs.twimg.com/profile_images/989181846922678274/yXDG8qV__400x400.jpg'
     ],
 ];
 
