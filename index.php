@@ -15,16 +15,16 @@
 		<link rel="stylesheet" href="assets/css/style.css">
 	</head>
 	<body>
-        <section>
-            <h3>Tavo emailas yra <?php print $_POST['email'] ?></h3>
-            <h3>Tavo slaptazodis yra <?php print $_POST['password'] ?></h3>
-            <h3> Tavo adresas yra <?php print $_POST['address']?></h3>
-            <h3> Tavo  antras adresas yra <?php print $_POST['address2']?></h3>
-            <h3> Tavo miestas yra <?php print $_POST['city']?></h3>
-            <h3> Tavo salis yra <?php print $_POST['state']?></h3>
-            <h3> Tavo zipas yra <?php print $_POST['zip']?></h3>
+		<section>
+			<h3>Tavo emailas yra <?php print $_POST['email'] ?></h3>
+			<h3>Tavo slaptazodis yra <?php print $_POST['password'] ?></h3>
+			<h3> Tavo adresas yra <?php print $_POST['address'] ?></h3>
+			<h3> Tavo antras adresas yra <?php print $_POST['address2'] ?></h3>
+			<h3> Tavo miestas yra <?php print $_POST['city'] ?></h3>
+			<h3> Tavo salis yra <?php print $_POST['state'] ?></h3>
+			<h3> Tavo zipas yra <?php print $_POST['zip'] ?></h3>
 
-        </section>
+		</section>
 		<div class="container mt-5">
 			<form method="post">
 				<div class="form-row">
@@ -77,6 +77,32 @@
 				</div>
 				<button type="submit" class="btn btn-primary">Sign in</button>
 			</form>
+		</div>
+		<div class="container">
+			<table class="w-100 text-center">
+				<?php
+				foreach (array_keys($usersData[0]) as $userInfo):?>
+				<th class='w-25 p-3 border border-dark'><?php print $userInfo?></th>
+				<?php endforeach; ?>
+				<!--<tr>
+					<th class='w-25 p-3 border border-dark'>Name:</th>
+					<th class='w-25 p-3 border border-dark'>Age:</th>
+					<th class='w-25 p-3 border border-dark'>Address:</th>
+					<th class='w-25 p-3 border border-dark'>Url:</th>
+				</tr>-->
+                <?php
+                foreach ($usersData as  $value) {
+                    print "
+					<tr>
+						<td class='w-25 p-3 border border-dark'>" . $value['name'] . "</td>
+						<td class='w-25 p-3 border border-dark'>" . $value['age'] . "</td>
+						<td class='w-25 p-3 border border-dark'>" . $value['address'] . "</td>
+						<td class='w-25 p-3 border border-dark'>" . $value['url'] . "</td>
+					</tr>					
+					";
+                }
+                ?>
+			</table>
 		</div>
 
 		<script type="text/javascript" src="assets/js/jquery.js"></script>
