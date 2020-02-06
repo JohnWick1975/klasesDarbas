@@ -1,18 +1,12 @@
 <?php
 
-$new_array = array_diff($_GET, array(''));
+$numbers = [0.5, 3, 7.3, 2, 7, 7.1, 9, 5.4, 4.0, 0.0001];
+$new_number = [];
+ foreach ($numbers as $value){
+     if (is_float($value) && $value != round($value)){
+        array_push($new_number, $value);
+     }
+ }
+ var_dump($new_number);
 
-$name = ['jonas' => 0, 'petras' => 20, 'simas' => 10];
-var_dump($name);
-
-$array = ['siandiena', 'rasiu', 'tave', 'batai', 'mano', 'busi'];
-
-$siandiena = array_search('siandien', $array);
-$batai = array_search('batai', $array);
-
-print '<br>' . $array[$siandiena] . ' ' . $array[$batai] . '<br>';
-print $array[0] . ' ' . $array[3] . '<br>';
-
-$array1 = ['Man atrodo tu esi geras zmogus.', 'Ir mielas'];
-$array2 = ['Tomai', 'Giedriau'];
- print $array2[0] . ' ' . $array1[0];
+var_dump($_POST);
