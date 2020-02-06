@@ -39,16 +39,33 @@
 				<button type="submit" class="btn btn-primary">Submit</button>
 			</form>
 		</div>
-		<div class="container">
-			<table>
-                <?php foreach (array_diff($_GET, array('')) as $value): ?>
+		<div class="container mb-5">
+			<table class="m-auto">
+                <?php foreach ($new_array as $value): ?>
 					<tr class="border border-dark">
-						<td class="border border-dark"><?php print $value . ' ';
-                            ?></td>
+						<td class="border border-dark p-3"><?php print $value . ' '; ?></td>
 					</tr>
                 <?php endforeach; ?>
 			</table>
 		</div>
+		<div class="container  mb-5">
+			<table class="m-auto text-center">
+				<tr class="border border-dark">
+                    <?php
+                    foreach ($name as $key => $item) {
+                        if ($item > 10) {
+                            print '<td class="border border-dark bg-danger p-3 w-25">' . $key . '</td>';
+                        } elseif ($item < 10) {
+                            print '<td class="border border-dark bg-primary p-3 w-25">' . $key . '</td>';
+                        } elseif ($item == 10) {
+                            print '<td class="border border-dark bg-warning p-3 w-25">' . $key . '</td>';
+                        }
+                    };
+                    ?>
+				</tr>
+			</table>
+		</div>
+
 
 		<script type="text/javascript" src="assets/js/jquery.js"></script>
 		<script type="text/javascript" src="assets/js/bootstrap.bundle.js"></script>
