@@ -15,23 +15,11 @@
 		<link rel="stylesheet" href="assets/css/style.css">
 	</head>
 	<body>
-		<div class="container">
-			<form method="post">
-				<label for="">Vardas</label>
-				<input name="vardas" type="text">
-				<label for="">Hobis</label>
-				<input name="hobis" type="text">
-				<label for="">Augintinis</label>
-				<input name="augintinis" type="text">
-				<button type="submit">Submit</button>
-			</form>
-
-			<div class="container">
-				<h2>Vardas: <?php print $_POST['vardas'] ?></h2>
-				<h2>Hobis: <?php print $_POST['hobis'] ?></h2>
-				<h2>Augintinis: <?php print $_POST['augintinis'] ?></h2>
-			</div>
-		</div>
+		<form method="post">
+			<input type="text" name="name">
+			<input type="email" name="email">
+			<button type="submit">Submit</button>
+		</form>
 
 		<script type="text/javascript" src="assets/js/jquery.js"></script>
 		<script type="text/javascript" src="assets/js/bootstrap.bundle.js"></script>
