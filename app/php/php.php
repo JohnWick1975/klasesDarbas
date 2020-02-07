@@ -12,8 +12,10 @@ for ($s = 1; $s <= 4; $s++) {
     $kiekIsgeriau = 0;
     for ($x = 1; $x <= 4; $x++) {
         $pirdienisKetvirtadienis = rand(1, 3);
+        print $pirdienisKetvirtadienis . ' buteliu isgerta ' . $x . ' diena <br>';
         $kiekIsgeriau += $pirdienisKetvirtadienis;
     }
+    print $kiekIsgeriau . ' nuo pirm. iki ketv.<br>';
     $savaite = $kiekIsgeriau + $penktadienis + $sestadienis;
     print $savaite . ' isgerta ' . $s . 'savaite' . '<br>';
     $menuo += $savaite;
