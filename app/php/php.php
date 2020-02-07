@@ -1,22 +1,24 @@
 <?php
-var_dump($_POST);
-//failo prijungimas
-$file = "list.txt";
 
-$fo = fopen($file, 'a') or die("can't open file");
+$dezesDydis = 24;
+$savaite = 0;
+$menuo = 0;
+$kiekIsgeriau = 0;
 
-$stringData = "Floppy Jalopy\n";
 
-fwrite($fo, implode(", ", $_POST) . ", " . "\n");
-
-fclose($fo);
-
-$content = file($file);
-$new_array = [];
-foreach ($content as $value) {
-    $array = explode(", ", $value);
-    array_pop($array);
-    array_push($new_array, $array);
+for ($s = 1; $s <= 4; $s++) {
+    $penktadienis = rand(4, 6);
+    $sestadienis = rand(1, 2);
+    for ($x = 1; $x <= 4; $x++) {
+        $pirdienisKetvirtadienis = rand(1, 3);
+        $kiekIsgeriau += $pirdienisKetvirtadienis;
+    }
+    $savaite = $kiekIsgeriau + $penktadienis + $sestadienis;
+    print $savaite . ' isgerta ' . $s . 'savaite' . '<br>';
+    $kiekIsgeriau = 0;
+    $menuo += $savaite;
 }
-var_dump($new_array);
-?>
+print $menuo . ' per menesi';
+
+
+
