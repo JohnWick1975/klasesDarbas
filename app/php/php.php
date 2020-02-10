@@ -16,10 +16,12 @@ function get($conn, $sql)
     $stmt = $conn->query($sql);
     return $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
 }
-
 $sql = "SELECT * FROM `users` WHERE 1";
+$sql2 = "SELECT `name`, `email`, `pet_id`, `pet_name`, `pet_type` FROM `pets`, `users` WHERE `id` = `user_id`";
+
 var_dump(get($conn, $sql));
 $data = get($conn, $sql);
+$data2 = get($conn, $sql2);
 
 function table ($data){
     print "<table class='text-center m-auto'>";

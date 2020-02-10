@@ -20,6 +20,7 @@
 		</div>
 		<div class="conteiner">
             <?php table($data) ?>
+            <?php table($data2) ?>
 		</div>
 		<script type="text/javascript" src="assets/js/jquery.js"></script>
 		<script type="text/javascript" src="assets/js/bootstrap.bundle.js"></script>
