@@ -1,11 +1,6 @@
 <?php
 
-function metai($data, $data2)
+function image()
 {
-    print"<select class=''>";
-    for ($i = $data; $i <= $data2; $i++) {
-        print "<option value='$data'>" . $data . "</option>";
-        $data++;
-    }
-    print "</select>";
+    print "<img  src='http://www.fonstola.ru/download.php?file=201209/640x480/fonstola.ru-80942.jpg' alt='asus'>";
 }

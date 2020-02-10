@@ -15,7 +15,7 @@
 		<link rel="stylesheet" href="assets/css/style.css">
 	</head>
 	<body>
-		<?php metai(2000, 2010) ?>
+		<?php image(); ?>
 		<script type="text/javascript" src="assets/js/jquery.js"></script>
 		<script type="text/javascript" src="assets/js/bootstrap.bundle.js"></script>
 		<script type="text/javascript" src="assets/js/bootstrap.js"></script>
