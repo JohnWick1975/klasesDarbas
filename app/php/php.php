@@ -1,6 +1,15 @@
 <?php
 
-function image()
+function forma()
 {
-    print "<img  src='http://www.fonstola.ru/download.php?file=201209/640x480/fonstola.ru-80942.jpg' alt='asus'>";
+    print "<form method='post'><label>Vardas</label><input name='name' type='text'><label>Emailas</label>
+<input name='email' type='email'><button name='button' type='submit'>Submit</button>";
+    var_dump($_POST);
+    if (isset($_POST['button'])) {
+        if (!empty($_POST['email']) && !empty($_POST['name'])) {
+            print "Tavo el.pastas yra: " . $_POST['email'] . "<br>" . "Tavo vardas yra: " . $_POST['name'] . "<br>";
+        } else {
+            print "klaidingai ivesti duomenys";
+        }
+    }
 }

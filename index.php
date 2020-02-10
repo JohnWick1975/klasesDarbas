@@ -15,7 +15,7 @@
 		<link rel="stylesheet" href="assets/css/style.css">
 	</head>
 	<body>
-		<?php image(); ?>
+		<?php forma(); ?>
 		<script type="text/javascript" src="assets/js/jquery.js"></script>
 		<script type="text/javascript" src="assets/js/bootstrap.bundle.js"></script>
 		<script type="text/javascript" src="assets/js/bootstrap.js"></script>
