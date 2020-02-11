@@ -1,4 +1,7 @@
-<?php include_once 'app/php/php.php';
+<?php
+include_once 'app/php/php.php';
+include_once 'app/conrollers/form.php';
+include_once 'app/conrollers/table.php';
 ?>
 
 <!doctype html>
@@ -18,9 +21,18 @@
 		<div class="container">
             <?php forma(); ?>
 		</div>
-		<div class="conteiner">
+		<div class="container mb-5">
             <?php table($data) ?>
-            <?php table($data2) ?>
+            <?php /*table($data2) */?>
+		</div>
+		<div class="container mb-5">
+			<?php delete_users_form($conn); ?>
+		</div>
+		<div class="container">
+			<?php insert_user_form($conn) ?>
+		</div>
+		<div class="container">
+			<?php edit_user_form($conn); ?>
 		</div>
 		<script type="text/javascript" src="assets/js/jquery.js"></script>
 		<script type="text/javascript" src="assets/js/bootstrap.bundle.js"></script>
