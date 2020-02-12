@@ -25,9 +25,9 @@ class Database
 
 
 
-    public function deleteInsert($sql, $name)
+    public function deleteInsert($sql)
     {
-        return $this->connection->prepare($sql)->execute($name);
+        return $this->connection->query($sql);
     }
 
     function __destruct()
