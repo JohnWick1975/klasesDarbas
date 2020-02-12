@@ -69,13 +69,13 @@ function edit_user_form($conn)
     $userName = '';
     $userEmail = '';
     $userPsw = '';
-    $id = $_POST['id'];
+    if (isset($_POST['id'])) {
+        $id = $_POST['id'];
+    }
 
-
-    var_dump($id);
     if (isset($_POST['getUserData'])) {
         if (isset($_POST['id'])) {
-            $sql = "SELECT `id`, `name`, `email`, `password` FROM `users` WHERE `id`= \"$id\"";
+            $sql = "SELECT `id`, `name`, `email`, `password` FROM `users` WHERE `id`= $id";
             $result = get($conn, $sql);
             var_dump($result);
             $userId = $result[0]['id'];
@@ -92,8 +92,8 @@ function edit_user_form($conn)
 <input class='d-block mx-auto mb-3' type='text' name='name' placeholder='name' value='$userName'>
 <input class='d-block mx-auto mb-3' type='email' name='email' placeholder='email' value='$userEmail'>
 <input class='d-block mx-auto mb-3' type='password' name='password' placeholder='password' value='$userPsw'>
-<button  type='submit' name='getUserData'>Get info</button>
-<button  type='submit' name='sentUserData'>Update</button></form>";
+<button type='submit' name='getUserData'>Get info</button>
+<button type='submit' name='sentUserData'>Update</button></form>";
 
     if (isset($_POST['sentUserData'])) {
         if (!empty($_POST['name']) && !empty($_POST['email']) && !empty($_POST['password'])) {
@@ -101,7 +101,7 @@ function edit_user_form($conn)
             $name = $_POST['name'];
             $email = $_POST['email'];
             $psw = $_POST['password'];
-            $sql = "UPDATE `users` SET `name`=\"$name\",`email`=\"$email\",`password`=\"$psw\" WHERE `id`= \"$id\"";
+            $sql = "UPDATE `users` SET `name`= $name,`email`= $email,`password`= $psw WHERE `id`= $id";
             print "<br>duomenys irasytos";
             return $conn->query($sql);
         } else {

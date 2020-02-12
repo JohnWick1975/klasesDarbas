@@ -28,10 +28,10 @@ include_once 'app/conrollers/table.php';
 		<div class="container mb-5">
 			<?php delete_users_form($conn); ?>
 		</div>
-		<div class="container">
+		<div class="container mb-5">
 			<?php insert_user_form($conn) ?>
 		</div>
-		<div class="container">
+		<div class="container mb-5">
 			<?php edit_user_form($conn); ?>
 		</div>
 		<script type="text/javascript" src="assets/js/jquery.js"></script>
