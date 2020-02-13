@@ -1,0 +1,17 @@
+body {
+    background-image: url("https://steamuserimages-a.akamaihd.net/ugc/931567283145259599/C14A641E1C230FA9ABCA8CE3E085950587E459D0/?imw=512&amp;imh=288&amp;ima=fit&amp;impolicy=Letterbox&amp;imcolor=%23000000&amp;letterbox=true");
+    background-size: cover;
+}
+
+h1 {
+    font-size: 50px;
+    font-family: "Times New Roman", sans-serif;
+    text-shadow: 2px 2px 2px red;
+}
+h3 {
+    text-shadow: 2px 2px 2px red;
+}
+
+a{
+    box-shadow: 5px 5px 15px 5px #000000;
+}

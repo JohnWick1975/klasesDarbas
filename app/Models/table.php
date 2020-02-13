@@ -7,7 +7,7 @@ class Table
     public function GetAllUsersAllDate($array)
     {
         print"<table><tr>";
-        foreach (array_keys($array) as $key) {
+        foreach ($array[0] as $key=> $value) {
             print '<th>' . $key . '</th>';
         }
         print '</tr>';
