@@ -2,7 +2,7 @@
 // Application configuration
 define("CONFIG", [
 
-    "site_path" => "Frame",
+    "site_path" => "test_data",
     "site_title" => "Frame",
 
     // Execution time and memory usage widget
